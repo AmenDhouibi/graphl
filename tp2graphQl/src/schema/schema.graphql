@@ -1,0 +1,31 @@
+type Query
+{
+    hello : String!
+    getUsers: [User!]
+}
+ enum Roles {
+    user
+    admin
+}
+
+type Cv {
+    id : ID!
+    name: String
+    age: Int
+    job: String
+    owner:User
+}
+
+type Skill {
+    id :ID!
+     designation : String
+    cvs:[Cv]
+}
+
+type User {
+    id : ID!
+    name:String
+    email:String
+    role:Role
+    cvs:[Cv]
+}
